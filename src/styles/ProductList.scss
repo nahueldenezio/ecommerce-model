@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+.product-list {
+    padding: 2rem;
+    text-align: center;
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }

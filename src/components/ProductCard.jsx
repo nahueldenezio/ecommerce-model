@@ -1,4 +1,4 @@
-import '../styles/ProductCard.scss';
+import "../styles/ProductCard.scss";
 
 const ProductCard = ({ product }) => {
   return (

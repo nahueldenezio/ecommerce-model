@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    width: 200px;
+  
+    img {
+      width: 100%;
+      height: auto;
+    }
+  
+    h2 {
+      font-size: 1.25rem;
+    }
+  
+    p {
+      font-size: 0.875rem;
+    }
+  
+    span {
+      font-weight: bold;
+    }
+  }
+  

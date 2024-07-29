@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Cart from './pages/Cart';  // Importa el componente del carrito
 import PrivateRoute from './pages/PrivateRoute';
 import Dashboard from './components/Dashboard';
 
@@ -12,7 +13,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path='/dashboard' element={<PrivateRoute element={Dashboard} />} />
+        <Route path="/cart" element={<Cart />} />  {/* Ruta para el carrito */}
+        <Route path="/dashboard" element={<PrivateRoute element={Dashboard} />} />
       </Routes>
     </div>
   );
