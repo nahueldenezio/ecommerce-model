@@ -1,0 +1,29 @@
+// Colores principales
+$primary-color: #68Da84; // Color principal
+$primary-color-light: #FFFFFF; // Color claro para el fondo o detalles
+$primary-color-dark: #31a24c; // Color oscuro para textos o detalles
+
+// Colores secundarios
+$secondary-color: #0c2812; // Color para el footer o elementos secundarios
+
+// Tipografía
+$font-family: 'Arial', sans-serif; // Tipografía principal
+$font-size-base: 16px; // Tamaño base de fuente
+$font-size-large: 1.25rem; // Tamaño grande de fuente
+$font-size-small: 0.875rem; // Tamaño pequeño de fuente
+
+// Espaciado
+$spacing-small: 0.5rem; // Espaciado pequeño
+$spacing-medium: 1rem; // Espaciado medio
+$spacing-large: 2rem; // Espaciado grande
+
+// Tamaño de bordes
+$border-radius: 4px; // Radio de borde para esquinas redondeadas
+$border-width: 1px; // Ancho del borde
+
+// Sombra
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra para elementos
+
+// Tamaños de contenedor
+$container-max-width: 1200px; // Ancho máximo del contenedor principal
+$container-padding: $spacing-medium; // Padding para el contenedor
