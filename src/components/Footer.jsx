@@ -4,7 +4,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer id="footer" className="footer">
       <div className="footer-content">
         <div className="social-icons">
           <a href="https://www.instagram.com/tu_comercio" target="_blank" rel="noopener noreferrer">

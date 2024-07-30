@@ -6,6 +6,7 @@ import Cart from './pages/Cart';
 import PrivateRoute from './pages/PrivateRoute';
 import Dashboard from './components/Dashboard';
 import { CartProvider } from './context/CartContext';
+import ProductDetail from './components/ProductDetail';
 import ProductList from './components/ProductList';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/products" element={<ProductList />} />
+          <Route path="/products/:id" element={<ProductDetail />} /> {/* Ruta para los detalles del producto */}
           <Route path="/cart" element={<Cart />} />
           <Route path="/dashboard" element={<PrivateRoute element={Dashboard} />} />
         </Routes>
