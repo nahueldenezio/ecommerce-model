@@ -21,5 +21,14 @@
     span {
       font-weight: bold;
     }
+
+    button {
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
   }
   
