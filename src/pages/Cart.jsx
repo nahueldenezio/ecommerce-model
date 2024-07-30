@@ -1,36 +1,28 @@
-import PropTypes from 'prop-types';
-import '../styles/CartDrawer.scss'; // Asegúrate de crear este archivo para los estilos
+import { useState } from 'react';
+import CartDrawer from '../components/CartDrawer'; // Asegúrate de que la ruta es correcta
+import { useCart } from '../context/CartContext';
+import '../styles/Cart.scss'; // Asegúrate de que tienes este archivo para los estilos
 
-const CartDrawer = ({ isOpen, onClose, cartItems, onCheckout }) => {
+const Cart = () => {
+  const { cartItems, removeFromCart } = useCart();
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const handleCheckout = () => {
+    removeFromCart(cartItems);
+    setIsCartOpen(false);
+  };
+
   return (
-    <div className={`cart-drawer ${isOpen ? 'open' : ''}`}>
-      <button className="close-button" onClick={onClose}>×</button>
-      <h2>Carrito de Compras</h2>
-      <ul>
-        {cartItems.length === 0 ? (
-          <p>Tu carrito está vacío.</p>
-        ) : (
-          cartItems.map((item) => (
-            <li key={item.id}>
-              <img src={item.image} alt={item.name} />
-              <div>
-                <h3>{item.name}</h3>
-                <p>${item.price}</p>
-              </div>
-            </li>
-          ))
-        )}
-      </ul>
-      <button className="checkout-button" onClick={onCheckout}>Finalizar Compra</button>
+    <div>
+      <button onClick={() => setIsCartOpen(true)}>Abrir Carrito</button>
+      <CartDrawer
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cartItems={cartItems}
+        onCheckout={handleCheckout}
+      />
     </div>
   );
 };
 
-CartDrawer.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  cartItems: PropTypes.array.isRequired,
-  onCheckout: PropTypes.func.isRequired,
-};
-
-export default CartDrawer;
+export default Cart;

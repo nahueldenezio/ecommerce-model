@@ -1,47 +1,76 @@
+@import '../styles/variables.scss';
+
 .login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+  height: 25rem;
+  width: 20rem;
+  margin: 0 auto; // Centra horizontalmente
+  padding: $spacing-medium;
+  background-color: $primary-color-dark;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  text-align: center;
+  font-family: $font-family;
   
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-  }
+  // Centra verticalmente
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// Título del formulario de login
+.login-container h2 {
+  font-size: $font-size-large;
+  color: $primary-color-dark;
+  margin-bottom: $spacing-medium;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Mensaje de error
+.login-container p {
+  color: $primary-color-dark;
+  font-size: $font-size-small;
+  margin-bottom: $spacing-medium;
+}
+
+// Estilos para el formulario
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-medium;
+  width: 100%; // Asegura que el formulario use el ancho del contenedor
+}
+
+// Estilos para los inputs
+.login-container input {
+  padding: $spacing-small;
+  border: $border-width solid $secondary-color;
+  border-radius: $border-radius;
+  font-size: $font-size-base;
+  color: $primary-color-dark;
+  background-color: $primary-color-light;
+  width: 100%; // Asegura que los inputs usen todo el ancho disponible
+}
+
+// Estilos para el botón de submit
+.login-container button {
+  padding: $spacing-small;
+  border: none;
+  border-radius: $border-radius;
+  background-color: $primary-color;
+  color: $primary-color-light;
+  font-size: $font-size-base;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; // Asegura que el botón use todo el ancho disponible
   
-  .login-form div {
-    margin-bottom: 15px;
+  &:hover {
+    background-color: $primary-color-dark;
   }
-  
-  .login-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .login-form input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .login-form button {
-    padding: 10px;
-    background-color: #68Da84;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .login-form button:disabled {
-    background-color: #ccc;
-  }
-  
-  .error {
-    color: red;
-    font-size: 12px;
-  }
-  
+}

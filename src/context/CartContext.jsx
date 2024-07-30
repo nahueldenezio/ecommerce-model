@@ -5,7 +5,6 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
-  // Funciones para añadir, eliminar, y obtener items del carrito
   const addToCart = (item) => {
     setCartItems((prevItems) => [...prevItems, item]);
   };

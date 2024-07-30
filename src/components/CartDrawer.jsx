@@ -1,10 +1,13 @@
-import PropTypes from 'prop-types';
-import '../styles/CartDrawer.scss';
+import PropTypes from "prop-types";
+import "../styles/CartDrawer.scss";
+import { Link } from "react-router-dom";
 
 const CartDrawer = ({ isOpen, onClose, cartItems, onCheckout }) => {
   return (
-    <div className={`cart-drawer ${isOpen ? 'open' : ''}`}>
-      <button className="close-button" onClick={onClose}>×</button>
+    <div className={`cart-drawer ${isOpen ? "open" : ""}`}>
+      <button className="close-button" onClick={onClose}>
+        ×
+      </button>
       <h2>Carrito de Compras</h2>
       <ul>
         {cartItems.length === 0 ? (
@@ -21,7 +24,9 @@ const CartDrawer = ({ isOpen, onClose, cartItems, onCheckout }) => {
           ))
         )}
       </ul>
-      <button className="checkout-button" onClick={onCheckout}>Finalizar Compra</button>
+      <button className="checkout-button" onClick={onCheckout}>
+        <Link to="/checkout">Finalizar Compra</Link>
+      </button>
     </div>
   );
 };

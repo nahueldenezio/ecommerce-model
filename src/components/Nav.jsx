@@ -1,9 +1,19 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Nav.scss';
+import CartDrawer from './CartDrawer';
+import '../styles/Cart.scss';
+import { useCart } from '../context/CartContext';
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { cartItems, removeFromCart } = useCart();
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const handleCheckout = () => {
+    removeFromCart(cartItems);
+    setIsCartOpen(false);
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -18,7 +28,13 @@ const Nav = () => {
       <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
         <li><Link to="/about">Nosotros</Link></li>
         <li><a href='#footer'>Contacto</a></li>
-        <li><Link to="/cart">Carrito</Link></li>
+        <li><a onClick={() => setIsCartOpen(true)}>Carrito</a></li>
+        <CartDrawer
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cartItems={cartItems}
+        onCheckout={handleCheckout}
+      />
       </ul>
     </nav>
   );
