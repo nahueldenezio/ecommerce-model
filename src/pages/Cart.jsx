@@ -1,25 +1,26 @@
+import { useState } from 'react';
+import CartDrawer from '../components/CartDrawer'; // Asegúrate de que la ruta es correcta
 import { useCart } from '../context/CartContext';
-import CartItem from '../components/CartItem';
-import '../styles/Cart.scss';
+import '../styles/Cart.scss'; // Asegúrate de que tienes este archivo para los estilos
 
 const Cart = () => {
-  const { cart, removeFromCart, updateQuantity } = useCart();
+  const { cartItems, removeFromCart } = useCart();
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const handleCheckout = () => {
+    removeFromCart(cartItems);
+    setIsCartOpen(false);
+  };
 
   return (
-    <div className="cart">
-      <h1>Carrito de Compras</h1>
-      {cart.length === 0 ? (
-        <p>Tu carrito está vacío</p>
-      ) : (
-        cart.map(item => (
-          <CartItem
-            key={item._id}
-            item={item}
-            onRemove={removeFromCart}
-            onUpdateQuantity={updateQuantity}
-          />
-        ))
-      )}
+    <div>
+      <button onClick={() => setIsCartOpen(true)}>Abrir Carrito</button>
+      <CartDrawer
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cartItems={cartItems}
+        onCheckout={handleCheckout}
+      />
     </div>
   );
 };
