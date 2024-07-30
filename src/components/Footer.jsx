@@ -21,7 +21,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Nuestro Emprendimiento. Todos los derechos reservados.
         </p>
         <p>
-          Powered by{" "}
+          Hecho por{" "}
           <a href="https://portfolio-nd.firebaseapp.com/" target="_blank" rel="noopener noreferrer">
             Nahuel Denezio
           </a>

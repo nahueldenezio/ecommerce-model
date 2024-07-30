@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../styles/CartDrawer.scss'; // Asegúrate de crear este archivo para los estilos
+import '../styles/CartDrawer.scss';
 
 const CartDrawer = ({ isOpen, onClose, cartItems, onCheckout }) => {
   return (
