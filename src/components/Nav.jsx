@@ -1,19 +1,27 @@
-import '../styles/Nav.scss';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/Nav.scss';
 
 const Nav = () => {
-    return (
-      <nav className="nav">
-        <div className="nav-logo">Logo</div>
-        <ul className="nav-links">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">Nosotros</Link></li>
-          <li><Link to="/products">Productos</Link></li>
-          <li><Link to="/contact">Contacto</Link></li>
-          <li><Link to="/cart">Carrito</Link></li>
-        </ul>
-      </nav>
-    );
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
-  
-  export default Nav;
+
+  return (
+    <nav className="nav">
+      <div className="nav-logo">Logo</div>
+      <div className={`menu-icon ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+        &#9776;
+      </div>
+      <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+        <li><Link to="/about">Nosotros</Link></li>
+        <li><Link to="/contact">Contacto</Link></li>
+        <li><Link to="/cart">Carrito</Link></li>
+      </ul>
+    </nav>
+  );
+};
+
+export default Nav;

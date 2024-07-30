@@ -1,19 +1,47 @@
 @import './variables.scss';
 
 .footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: $secondary-color;
-    color: #fff;
-  }
+  background-color: $secondary-color;
+  color: #fff;
+  padding: 0.5rem 0.5rem;  // Ajustar el tamaño del padding para hacerlo más pequeño
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 
-  a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;  // Hacer el texto más pequeño
 
-  a:hover{
-    color: $primary-color;
+    .social-icons {
+      margin-bottom: 0.5rem;
+
+      a {
+        color: #fff;
+        margin: 0 0.5rem;
+        font-size: 1.5rem;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+
+    p {
+      margin: 0.25rem 0;  // Reducir el margen para hacer el footer más compacto
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        font-weight: normal;  // Hacer el texto más sutil
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
   }
-  
+}
