@@ -17,7 +17,7 @@ const Nav = () => {
       </div>
       <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
         <li><Link to="/about">Nosotros</Link></li>
-        <li><Link to="/contact">Contacto</Link></li>
+        <li><a href='#footer'>Contacto</a></li>
         <li><Link to="/cart">Carrito</Link></li>
       </ul>
     </nav>

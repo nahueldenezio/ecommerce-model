@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import api from '../api/axios';
 import '../styles/Home.scss';
+import About from '../components/About';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -29,6 +30,7 @@ const Home = () => {
       <Nav />
       <HeroSection />
       <ProductList products={products} />
+      <About />
       <Footer />
     </div>
   );
