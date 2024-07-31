@@ -5,3 +5,7 @@ body {
   font-family: Arial, sans-serif;
   margin-top: 4rem;
 }
+
+body, html {
+  overflow-x: hidden;
+}
