@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import "../styles/ProductCard.scss";
 
 const ProductCard = ({ product }) => {
@@ -10,7 +10,8 @@ const ProductCard = ({ product }) => {
         <img src={product.image} alt={product.name} />
         <span>${product.price}</span>
       </Link>
-      <button onClick={() => console.log('Add to cart')}>Ver</button>
+      <button>Ver</button>
+      <button>Agregar al carrito</button>
     </div>
   );
 };
