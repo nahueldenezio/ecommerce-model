@@ -8,6 +8,7 @@ import Dashboard from './components/Dashboard';
 import { CartProvider } from './context/CartContext';
 import ProductDetail from './components/ProductDetail';
 import ProductList from './components/ProductList';
+import CheckoutForm from './components/CheckoutForm';
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
           <Route path="/products" element={<ProductList />} />
           <Route path="/products/:id" element={<ProductDetail />} /> {/* Ruta para los detalles del producto */}
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<CheckoutForm />} />
+          {/* <Route path="/checkout" element={<PrivateRoute element={CheckoutForm} />} /> */}
           <Route path="/dashboard" element={<PrivateRoute element={Dashboard} />} />
         </Routes>
       </div>
