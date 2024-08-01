@@ -6,12 +6,10 @@ const ProductCard = ({ product }) => {
   return (
     <div className="product-card">
       <Link to={`/products/${product._id}`}>
-        <h2>{product.name}</h2>
         <img src={product.image} alt={product.name} />
+        <p>{product.name}</p>
         <span>${product.price}</span>
       </Link>
-      <button>Ver</button>
-      <button>Agregar al carrito</button>
     </div>
   );
 };
