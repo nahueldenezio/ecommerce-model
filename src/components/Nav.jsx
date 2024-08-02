@@ -4,6 +4,7 @@ import "../styles/Nav.scss";
 import CartDrawer from "./CartDrawer";
 import "../styles/Cart.scss";
 import { useCart } from "../context/CartContext";
+import Logo from '../assets/logo.svg';
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,7 +22,7 @@ const Nav = () => {
 
   return (
     <nav className="nav">
-      <div className="nav-logo"><a className="nav-a" href="/">Logo</a></div>
+      <div className="nav-logo"><a className="nav-a" href="/"><img className="logo" src={Logo} alt="Logo"/></a></div>
       <div
         className={`menu-icon ${menuOpen ? "open" : ""}`}
         onClick={toggleMenu}

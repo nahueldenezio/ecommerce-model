@@ -3,7 +3,17 @@
 .product-list {
     padding: 2rem;
     text-align: center;
-  
+    background-image: url('https://wallpapercave.com/wp/wp4924017.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    margin: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    text-align: center;
+
     h2 {
       font-size: 2rem;
     }
@@ -13,5 +23,11 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .product-list {
+      height: 1500px;
     }
   }
