@@ -9,6 +9,7 @@ import { CartProvider } from './context/CartContext';
 import ProductDetail from './components/ProductDetail';
 import ProductList from './components/ProductList';
 import CheckoutForm from './components/CheckoutForm';
+import Prods from './pages/Prods';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/products" element={<ProductList />} />
+          <Route path='/Prods' element={<Prods />} />
           <Route path="/products/:id" element={<ProductDetail />} /> {/* Ruta para los detalles del producto */}
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<CheckoutForm />} />

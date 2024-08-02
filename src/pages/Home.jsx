@@ -8,6 +8,8 @@ import Nav from '../components/Nav';
 import api from '../api/axios';
 import '../styles/Home.scss';
 import About from '../components/About';
+import HomeGrid from '../components/HomeGrid';
+import MoreGrid from '../components/MoreGrid';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -29,7 +31,9 @@ const Home = () => {
     <div>
       <Nav />
       <HeroSection />
+      <HomeGrid />
       <ProductList products={products} />
+      <MoreGrid />
       <About />
       <Footer />
     </div>
