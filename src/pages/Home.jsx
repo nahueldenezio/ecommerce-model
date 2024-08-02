@@ -1,5 +1,3 @@
-// src/pages/Home.jsx
-
 import { useEffect, useState } from 'react';
 import HeroSection from '../components/HeroSection';
 import ProductList from '../components/ProductList';
