@@ -27,6 +27,15 @@
     font-weight: bold;
   }
 
+  .nav-a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
   .nav-links {
     list-style: none;
     display: flex;
